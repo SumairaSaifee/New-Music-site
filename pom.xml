@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Your project information -->
+    <groupId>com.example</groupId>  <!-- This is like the ID of your project -->
+    <artifactId>my-web-app</artifactId>  <!-- Your project name -->
+    <version>1.0-SNAPSHOT</version>  <!-- Version of your project -->
+
+    <!-- Packaging type: war -->
+    <packaging>war</packaging>  <!-- This tells Maven to package it as a WAR file -->
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Example: Servlet API dependency for web applications -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>  <!-- The library is provided by the server -->
+        </dependency>
+        <!-- Add other dependencies as needed -->
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- This plugin is responsible for creating the WAR file -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
